@@ -1,0 +1,87 @@
+.home-wrap{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    margin-top:50px;
+}
+
+
+.home-box{
+    position:relative;
+    width:40%;
+}
+.home-wrap img{
+    height:600px;
+    }
+.home-box h1{
+    font-size:5rem;
+}
+.home-box blockquote{
+    font-size:30px;
+    line-height:45px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.home-box button{
+    background-color:transparent;
+    color:var(--main-color);
+    padding:10px 25px;
+    position:absolute;
+    right:0;
+    border:none;
+    cursor:pointer;
+    width:140px;    
+    border:1.3px solid var(--main-color);
+    border-radius:6px;
+   
+}
+.home-box button:hover{
+    background-color:var(--main-color);
+    color:white;
+    padding:10px 25px;
+    position:absolute;
+    right:0;
+    border:none;
+    cursor:pointer;
+    width:140px;    
+   
+}
+
+.home-box button:hover span {
+    display:none
+  }
+.home-box button:hover:before{
+    
+    content:"Bon Apetit";
+   
+}
+
+@media only screen and (max-width: 1300px) {
+   
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .home-wrap{
+        display:block;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .home-box{
+        position:relative;
+        width:100%;
+    }
+    .home-wrap img{
+       height:auto;
+        width:100%;
+        margin-top:50px;
+        }
+    .home-box button{
+        background-color:blue;
+        color:white;
+        padding:10px 25px;
+        position:static;
+        right:0;
+        width:100%;
+       
+       
+    }
+  }

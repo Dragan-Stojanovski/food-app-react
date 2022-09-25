@@ -1,0 +1,125 @@
+.cards-order ul{
+    list-style:none;
+   display:flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   width:100%;
+   margin:auto;
+   align-content: stretch;
+   text-align:center;
+  align-items:center;
+  
+  }
+  .cards-order ul a{
+    width:30%;
+  }
+  
+  .paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    margin-top:50px;
+  }
+  
+  .paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: var(--main-color);
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: var(--main-color);
+  }
+  
+  .paginationDisabled a {
+    color: grey;
+    background-color: grey;
+  }
+  .top-description{
+    text-align:center;
+  }
+  .top-description h2{
+    font-size:3rem;
+  }
+  .pagination-wrap h2{
+    text-align:center;
+    font-size:3rem;
+  }
+  .top-description h3{
+    font-size:3rem;
+    color:red;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .filter-btn{
+  color:var(--main-color);
+  background-color:transparent;
+  border:1.3px solid var(--main-color);
+  padding:4px 10px;
+  margin:10px;
+  border-radius:5px;
+  cursor:pointer;
+  }
+  .filter-btn:hover{
+    color:white;
+    background-color:var(--main-color);
+  
+  }
+  #products-counter{
+    background-color:transparent;
+    width:max-content;
+    padding:10px 20px;
+    border-radius:7px;
+    border:1.5px solid var(--main-color);
+    color:var(--main-color);
+  }
+  #count-product{
+    background-color:var(--main-color);
+    color:white;
+    border-radius:4px;
+    padding:5px;
+    font-size:30px;
+  }
+  .pagination-wrap h2{
+    color:var(--main-color);
+    margin-top:100px;
+  }
+  select{
+    padding:3px;
+    border-radius:5px;
+    border:1.3px solid var(--main-color);
+    color:var(--main-color);
+    cursor:pointer;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    .cards-order ul a{
+      width:40%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .cards-order ul a{
+      width:95%;
+    }
+    .cards-order{
+      text-align:center;
+    }
+    #sostojki{
+      width:80%;
+    }
+    .cards-order{
+      margin-top:30px;
+    }
+  }
