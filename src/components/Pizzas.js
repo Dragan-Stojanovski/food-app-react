@@ -47,16 +47,6 @@ function Pizzas() {
       );
     });
 
-  const filterHandlerReverse = () => {
-    setFiltered(false);
-    setProductsCount(users.length);
-  };
-
-  const filterButtonReverse = (
-    <button onClick={filterHandlerReverse} className="filter-btn">
-      Show All
-    </button>
-  );
   const fetchInter = () => {
     fetch(
       `https://world.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=pizzas&tagtype_1=ingredients&tag_contains_1=contains&tag_1=${intvalue}&json=true`
@@ -86,6 +76,38 @@ function Pizzas() {
       }
     });
 
+    const filterHandlerReverse = () => {
+      setFiltered(false);
+      setProductsCount(users.length);
+    };
+  
+    const filterButtonReverse = (
+      <button onClick={filterHandlerReverse} className="filter-btn">
+        Show All
+      </button>
+    );
+  
+
+    const displayHandler = () => {
+      if (!filtered) {
+        return displayUsers;
+      } else if (filtered && poductsCount > 0) {
+        return displayFilteredUsers;
+      }
+    };
+    
+    const myFunction = () => {
+      if (!filtered) {
+        setProductsCount(users.length);
+      } else if (filtered) {
+        setProductsCount(filteredByIngredient.length);
+      }
+    };
+  
+    useEffect(() => {
+      myFunction();
+    },);
+
   const routingMessage = () => {
     if (filtered) {
       return <h2>Pizzas containing:</h2>;
@@ -100,25 +122,6 @@ function Pizzas() {
     setPageNumber(selected);
   };
 
-  const displayHandler = () => {
-    if (!filtered) {
-      return displayUsers;
-    } else if (filtered && poductsCount > 0) {
-      return displayFilteredUsers;
-    }
-  };
-  
-  const myFunction = () => {
-    if (!filtered) {
-      setProductsCount(users.length);
-    } else if (filtered) {
-      setProductsCount(filteredByIngredient.length);
-    }
-  };
-
-  useEffect(() => {
-    myFunction();
-  },);
 
   if (isLoaded) {
     return (

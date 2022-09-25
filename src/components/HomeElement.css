@@ -64,6 +64,8 @@
         display:block;
         justify-content: space-around;
         align-items:center;
+        width:95%;
+        margin:auto;
     }
     .home-box{
         position:relative;
